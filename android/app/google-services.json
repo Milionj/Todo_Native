@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "843127197153",
+    "project_id": "nativtodoapp",
+    "storage_bucket": "nativtodoapp.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:843127197153:android:23ebd45f4286bc4b9296a0",
+        "android_client_info": {
+          "package_name": "com.nativtodo"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDoL4FIiGwHY41Ihj60jjQ-s0jX55-DfSM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
