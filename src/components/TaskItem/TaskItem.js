@@ -1,24 +1,25 @@
+// src/components/TaskItem.js
 import React from 'react';
-import {View, Text, StyleSheet} from 'react-native';
+import {View, Text, TouchableOpacity} from 'react-native';
 
-const TaskItem = ({task}) => {
+// Composant qui reçoit une tâche et deux callbacks : onDelete, onToggleComplete
+const TaskItem = ({task, onDelete, onToggleComplete}) => {
   return (
-    <View style={styles.container}>
-      <Text style={styles.text}>{task.title}</Text>
+    <View>
+      {/* Clique sur le texte pour marquer comme complétée */}
+      <TouchableOpacity onPress={onToggleComplete}>
+        <Text>
+          {task.completed ? '[✔] ' : '[ ] '}
+          {task.title}
+        </Text>
+      </TouchableOpacity>
+
+      {/* Bouton de suppression de la tâche */}
+      <TouchableOpacity onPress={onDelete}>
+        <Text>Supprimer</Text>
+      </TouchableOpacity>
     </View>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    padding: 10,
-    marginVertical: 5,
-    backgroundColor: '#f2f2f2',
-    borderRadius: 5,
-  },
-  text: {
-    fontSize: 16,
-  },
-});
 
 export default TaskItem;
